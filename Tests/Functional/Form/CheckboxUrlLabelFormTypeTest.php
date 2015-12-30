@@ -26,7 +26,7 @@ class CheckboxUrlLabelFormTypeTest extends BaseTestCase
         $this->getContainer()->get('twig')->initRuntime();
         $renderer = $this->getContainer()->get('twig')->getExtension('form')->renderer;
 
-        $view = $this->getContainer()->get('form.factory')->createNamedBuilder('name', 'form')
+        $view = $this->getContainer()->get('form.factory')->createNamedBuilder('name')
             ->add('terms', 'cmf_core_checkbox_url_label', array(
                 'label' => '%a% and %b% and %c%',
                 'routes' => array(

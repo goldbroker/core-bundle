@@ -71,6 +71,7 @@ class PublishWorkflowTest extends BaseTestCase
             new Role('ROLE_CAN_VIEW_NON_PUBLISHED'),
         );
         $token = new UsernamePasswordToken('test', 'pass', 'testprovider', $roles);
+
         $context = $this->getContainer()->get('security.context');
         $context->setToken($token);
 
