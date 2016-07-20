@@ -164,6 +164,19 @@ class CmfHelper extends Helper
     }
 
     /**
+     * Finds a document by path and locale.
+     *
+     * @param $path
+     * @param $locale
+     *
+     * @return null|object
+     */
+    public function findTranslation($path, $locale)
+    {
+        return $this->getDm()->findTranslation(null, $path, $locale);
+    }
+
+    /**
      * Gets a document instance and validate if its eligible.
      *
      * @param string|object $document   the id of a document or the document
